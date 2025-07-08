@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #2cbce9;
+  --color-red: #dc4492;
+  --color-yellow: #fdcc49;
+  --color-grey: #ededed;
+  --color-deep-blue: #010026;
+  --color-dark-grey: #757575;
+  --color-opaque-black: rgba(0, 0, 0, 0.35);
+
+  --font-playfair: "Playfair Display", serif;
+
+  --breakpoint-mobile: 30rem; /* 480px */
+  --breakpoint-tablet: 48rem; /* 768px */
+  --breakpoint-laptop: 66.25rem; /* 1060px */
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  background: #010026;
+  @apply text-white;
+  /* font-family: "Playfair Display", serif; */
+}
+
+/* Tailwind css v4.0 features */
+/* 1. @theme */
+
+/*
+.bg-deep-blue {
+  background-color: var(--deep-blue-500);
+} */
+
+/* 2. @utility */
+/* @utility container {
+  padding: 20px;
+  max-width: 1280px;
+  margin: auto;
+} */
