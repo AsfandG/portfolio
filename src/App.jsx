@@ -5,6 +5,7 @@ import DotGroup from "./components/dot-group";
 import Landing from "./components/landing";
 import LineGradient from "./components/line-gradient";
 import MySkills from "./components/my-skills";
+import Projects from "./components/projects";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -44,8 +45,12 @@ const App = () => {
       </div>
 
       <LineGradient />
-      <div className="w-5/6 mx-auto tablet:h-full">
+      <div className="w-5/6 mx-auto tablet:h-auto">
         <MySkills />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto">
+        <Projects />
       </div>
     </div>
   );
