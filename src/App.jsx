@@ -3,6 +3,8 @@ import Navbar from "./components/navbar";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/dot-group";
 import Landing from "./components/landing";
+import LineGradient from "./components/line-gradient";
+import MySkills from "./components/my-skills";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -39,6 +41,11 @@ const App = () => {
         )}
 
         <Landing setSelectedPage={setSelectedPage} />
+      </div>
+
+      <LineGradient />
+      <div className="w-5/6 mx-auto tablet:h-full">
+        <MySkills />
       </div>
     </div>
   );
