@@ -6,12 +6,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
 
   const isAboveSmallScreen = useMediaQuery("(min-width:768px)");
-  const navBackground = isTopOfPage ? "" : "bg-red";
+  const navBackground = isTopOfPage ? "" : "bg-red text-white";
   return (
-    <nav className={`${navBackground} z-40 py-6 w-full fixed top-0`}>
+    <nav
+      className={`${navBackground} z-40 py-4 w-full fixed top-0 text-charcoal`}
+    >
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="text-3xl font-bold font-playfair">
-          JE
+          Asfand.dev
           {/* Asfand<span className="text-blue">Yar</span> */}
         </h4>
 
@@ -34,7 +36,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Testimonials"
+              page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

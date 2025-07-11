@@ -2,7 +2,10 @@
 
 @theme {
   --color-blue: #2cbce9;
-  --color-red: #dc4492;
+  --color-red: #1f2937;
+  --color-charcoal: #1f2937;
+  /* --color-red: #f9c5d5; */
+  /* --color-red: #dc4492; */
   --color-yellow: #fdcc49;
   --color-grey: #ededed;
   --color-deep-blue: #010026;
@@ -24,8 +27,9 @@ body,
 #root,
 .app {
   height: 100%;
-  background: #010026;
-  @apply text-white;
+  background: #f3f4f6;
+  /* @apply text-white; */
+  /* @apply text-[#1f2937]; */
   /* font-family: "Playfair Display", serif; */
 }
 

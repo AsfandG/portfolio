@@ -1,6 +1,6 @@
 import React from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
-import ProfileImage from "../assets/profile-image.png";
+import ProfileImage from "../assets/profile-pic.jpg";
 import { motion } from "motion/react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "./social-media-icons";
@@ -16,7 +16,7 @@ const Landing = ({ setSelectedPage }) => {
       {/* Image */}
       <div className="laptop:order-2 flex justify-center basis-2/6 z-10 mt-16 laptop:mt-32">
         {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:-top-16 before:-left-16 before:rounded-t-[400px] before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
+          <div className="relative z-0 ml-20 rounded-md overflow-hidden border border-gray-300">
             <img
               src={ProfileImage}
               alt="profile"
@@ -35,6 +35,7 @@ const Landing = ({ setSelectedPage }) => {
       <div className="z-30 basis-2/5 mt-12 laptop:mt-32">
         <motion.div
           initial="hidden"
+          className="text-charcoal"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
@@ -43,15 +44,13 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center laptop:text-start">
-            Jane{" "}
-            <span className="mobile:relative mobile:text-deep-blue mobile:font-semibold z-20 mobile:before:content-[var(--brush)] before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]">
-              Esper
-            </span>
+          <p className="text-7xl font-playfair z-10 text-center laptop:text-start">
+            Front-End Developer
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center laptop:text-start">
-            I create clean, scalable frontend solutions that users love
+            Hi, I am Asfandyar. A passionate Front-end React Developer based in
+            Islamabad, Pakistan.
           </p>
         </motion.div>
 
@@ -68,21 +67,11 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-linear-to-r from-[#24cbff] via-[#fc59ff] to-[#ffbd0c] text-deep-blue rounded-sm py-2 px-6 font-semibold hover:bg-blue hover:text-white transition duration-500 "
+            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white transition duration-500 hover:bg-[#c13b80]"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
-          </AnchorLink>
-
-          <AnchorLink
-            className=" rounded-r-sm bg-linear-to-r from-[#24cbff] via-[#fc59ff] to-[#ffbd0c] py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
-          >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-8">
-              Let's talk
-            </div>
+            Download Resume
           </AnchorLink>
         </motion.div>
 
