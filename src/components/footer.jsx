@@ -1,4 +1,4 @@
-import linkedInIcon from "../assets/linkedin2.png";
+import linkedInIcon from "../assets/linkedin-logo2.png";
 import github from "../assets/github-logo.png";
 
 const Footer = () => {
