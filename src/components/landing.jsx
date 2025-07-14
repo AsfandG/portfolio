@@ -1,6 +1,7 @@
 import React from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import ProfileImage from "../assets/profile-pic.jpg";
+import DownloadIcon from "../assets/load.png";
 import { motion } from "motion/react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "./social-media-icons";
@@ -67,10 +68,13 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white transition duration-500 hover:bg-[#c13b80]"
+            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white transition duration-500 hover:bg-yellow flex items-center gap-2"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
+            <span>
+              <img src={DownloadIcon} alt="" className="size-6" />
+            </span>{" "}
             Download Resume
           </AnchorLink>
         </motion.div>
