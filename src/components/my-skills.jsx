@@ -3,6 +3,11 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import LineGradient from "./line-gradient";
 import skillsImage from "../assets/skills-image.png";
 import { motion } from "motion/react";
+import {
+  backendSkills,
+  frontendSkills,
+  toolsAndOtherSkills,
+} from "../assets/constants";
 
 const MySkills = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
@@ -26,8 +31,8 @@ const MySkills = () => {
           </p>
           <LineGradient width="1/3" />
           <p className="mt-10 mb-7">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            non error ut odio cum eum, illum numquam quaerat libero iste.
+            Here are the tools and technologies I've worked with to build
+            responsive, dynamic, and user-friendly web applications
           </p>
         </motion.div>
 
@@ -43,7 +48,7 @@ const MySkills = () => {
       </div>
 
       {/* Skills */}
-      <div className="laptop:flex laptop:justify-between mt-16 gap-32">
+      <div className="laptop:flex laptop:justify-between mt-16 gap-14">
         {/* Experience */}
         <motion.div
           className="laptop:w-1/3 mt-10"
@@ -60,18 +65,17 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">01</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Experience
+                Frontend
               </p>
             </div>
 
             <div className="w-1/2 laptop:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            veritatis repellendus ducimus? Voluptate provident voluptas quis
-            aliquid blanditiis quos laboriosam repellat sequi distinctio soluta.
-            Reprehenderit alias illo vitae facilis sunt!
-          </p>
+          <div className="mt-5 flex flex-wrap gap-4">
+            {frontendSkills.map((skill, index) => (
+              <Skill skill={skill} key={index} />
+            ))}
+          </div>
         </motion.div>
 
         {/* Innovative */}
@@ -90,18 +94,17 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">02</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Innovative
+                Backend
               </p>
             </div>
 
-            <div className="w-1/2 laptop:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 laptop:w-3/4 h-32 bg-dark-grey absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            veritatis repellendus ducimus? Voluptate provident voluptas quis
-            aliquid blanditiis quos laboriosam repellat sequi distinctio soluta.
-            Reprehenderit alias illo vitae facilis sunt!
-          </p>
+          <div className="mt-5 flex flex-wrap gap-4">
+            {backendSkills.map((skill, index) => (
+              <Skill skill={skill} key={index} />
+            ))}
+          </div>
         </motion.div>
 
         {/* Imaginative */}
@@ -120,18 +123,17 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Imaginative
+                Development Tools
               </p>
             </div>
 
             <div className="w-1/2 laptop:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
-          <p className="mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            veritatis repellendus ducimus? Voluptate provident voluptas quis
-            aliquid blanditiis quos laboriosam repellat sequi distinctio soluta.
-            Reprehenderit alias illo vitae facilis sunt!
-          </p>
+          <div className="mt-5 flex flex-wrap gap-4">
+            {toolsAndOtherSkills.map((skill, index) => (
+              <Skill skill={skill} key={index} />
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
@@ -139,3 +141,14 @@ const MySkills = () => {
 };
 
 export default MySkills;
+
+const Skill = ({ skill, key }) => {
+  return (
+    <div
+      key={key}
+      className="bg-charcoal text-white py-1 px-4 rounded inline-block text-sm"
+    >
+      {skill}
+    </div>
+  );
+};
