@@ -5,6 +5,7 @@ import DownloadIcon from "../assets/load.png";
 import { motion } from "motion/react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "./social-media-icons";
+import resume from "../assets/Resume.pdf";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
@@ -67,16 +68,16 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
-            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white transition duration-500 hover:bg-yellow flex items-center gap-2"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+          <a
+            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white hover:bg-slate-600 transition duration-500 flex items-center gap-2"
+            href={resume}
+            download={"resume"}
           >
             <span>
               <img src={DownloadIcon} alt="" className="size-6" />
             </span>{" "}
             Download Resume
-          </AnchorLink>
+          </a>
         </motion.div>
 
         <motion.div

@@ -131,7 +131,7 @@ const MySkills = () => {
           </div>
           <div className="mt-5 flex flex-wrap gap-4">
             {toolsAndOtherSkills.map((skill, index) => (
-              <Skill skill={skill} key={index} />
+              <Skill skill={skill} index={index} />
             ))}
           </div>
         </motion.div>
@@ -142,10 +142,10 @@ const MySkills = () => {
 
 export default MySkills;
 
-const Skill = ({ skill, key }) => {
+const Skill = ({ skill, index }) => {
   return (
     <div
-      key={key}
+      key={index}
       className="bg-charcoal text-white py-1 px-4 rounded inline-block text-sm"
     >
       {skill}
