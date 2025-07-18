@@ -69,7 +69,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <a
-            className="bg-[#1f2937] rounded-sm py-2 px-5 font-medium text-white hover:bg-slate-600 transition duration-500 flex items-center gap-2"
+            className="bg-[#1f2937] rounded-sm py-2 px-3  text-white hover:bg-slate-600 transition duration-500 flex items-center gap-2"
             href={resume}
             download={"resume"}
           >
